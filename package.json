@@ -1,24 +1,17 @@
 {
-  "name": "spring-data-rest-and-reactjs",
+  "name": "notify",
   "version": "0.1.0",
-  "description": "Demo of ReactJS + Spring Data REST",
+  "description": "push notification poc",
   "repository": {
     "type": "git",
-    "url": "git@github.com:spring-guides/tut-react-and-spring-data-rest.git"
+    "url": "git@github.com:dicksontung/notify.git"
   },
-  "keywords": [
-    "rest",
-    "hateoas",
-    "spring",
-    "data",
-    "react"
-  ],
-  "author": "Greg L. Turnquist",
+  "author": "dickson",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/spring-guides/tut-react-and-spring-data-rest/issues"
+    "url": "https://github.com/dicksontung/notify/issues"
   },
-  "homepage": "https://github.com/spring-guides/tut-react-and-spring-data-rest",
+  "homepage": "https://github.com/dicksontung/notify",
   "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
