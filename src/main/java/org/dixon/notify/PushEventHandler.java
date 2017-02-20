@@ -29,19 +29,19 @@ public class PushEventHandler {
     }
 
     @HandleAfterCreate
-    public void newEmployee(PushEvent pushEvent) {
+    public void newEvent(PushEvent pushEvent) {
         this.websocket.convertAndSend(
                 MESSAGE_PREFIX + "/newEvent", getPath(pushEvent));
     }
 
     @HandleAfterDelete
-    public void deleteEmployee(PushEvent pushEvent) {
+    public void deleteEvent(PushEvent pushEvent) {
         this.websocket.convertAndSend(
                 MESSAGE_PREFIX + "/deleteEvent", getPath(pushEvent));
     }
 
     @HandleAfterSave
-    public void updateEmployee(PushEvent pushEvent) {
+    public void updateEvent(PushEvent pushEvent) {
         this.websocket.convertAndSend(
                 MESSAGE_PREFIX + "/updateEvent", getPath(pushEvent));
     }
@@ -49,7 +49,7 @@ public class PushEventHandler {
     /**
      * Take an {@link PushEvent} and get the URI using Spring Data REST's {@link EntityLinks}.
      *
-     * @param pushEvent
+     * @param pushEvent event
      */
     private String getPath(PushEvent pushEvent) {
         return this.entityLinks.linkForSingleResource(pushEvent.getClass(),
